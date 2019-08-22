@@ -37,7 +37,7 @@ public abstract class ApiRequest<T extends ApiRequest, R extends ApiResponse> {
         this.url = url;
         this.responseClass = responseClass;
         this.parameters = new HashMap<>();
-        this.headers = Headers.of("User-Agent", Constant.USER_AGENT, "Content-Type", this.contentType);
+        this.headers = Headers.of("User-Agent", Constant.USER_AGENT, "Content-Type", this.contentType,"Range","bytes=0-");
     }
 
     public T header(String name, String value) {
